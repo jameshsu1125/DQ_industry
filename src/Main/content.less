@@ -1,0 +1,20 @@
+@r: 0.6666666666666667;
+
+#content
+{
+	float: left;
+	position: relative;
+	width: 100%;
+	height: auto;
+	min-height: 100%;
+	padding-top: 100px * @r;
+	padding-bottom: 100px * @r
+}
+
+@media only screen and (max-width: 640px) {
+	#content
+	{
+		padding-top: 80px;
+		padding-bottom: 150px;
+	}
+}

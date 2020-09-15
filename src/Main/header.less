@@ -1,0 +1,162 @@
+@r: 0.6666666666666667;
+
+#header
+{
+	position: fixed;
+	width: 100%;
+	height: 100px * @r;
+	background-color: #354e31;
+	top: 0px;
+	text-align: center;
+
+	div
+	{
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+
+	.rows
+	{
+		position: relative;
+		width: 100%;
+		max-width: 990px;
+		height: 100%;
+		display: inline-block;
+
+
+		#header-logo
+		{
+			float: left;
+			background-image: url('./img/header/logo.png');
+			width: 280px * @r;
+			height: 100%;
+			margin-left: 40px;
+			cursor: pointer;
+		}
+
+		.header-menu
+		{
+			float: right;
+			width: 344px;
+			height: 30px;
+			margin-right: 20px;
+			margin: 20px 0px;
+			background: #354e31;
+			overflow: hidden;
+			text-align: center;
+
+			.b
+			{
+				float: left;
+				height: 30px;
+				font-size: 14px;
+				font-family: 'Noto Sans TC', sans-serif;
+				line-height: 20px;
+				color: #FFF;
+				user-select: none;
+				cursor: pointer;
+				padding: 5px 10px;
+				margin: 0px 5px;
+				border-radius: 15px;
+				transition: .2s;
+			}
+
+			.b:hover
+			{
+				background-color: #FFF; 
+				color: #354e31;
+			}
+
+			.on
+			{
+				background-color: #FFF; 
+				color: #354e31;
+			}
+		}
+
+		.header-ham
+		{
+			position: absolute;
+			right: 10px;
+			width: 80px;
+			height: 80px;
+			display: none;
+			cursor: pointer;
+			transform: rotate(90deg);
+
+			.c
+			{
+				position: absolute;
+				left: 50%;
+				top: 50%;
+
+				.l
+				{
+					position: absolute;
+					width: 8px;
+					height: 50px;
+					background-color: #FFF;
+					top: -25px;
+					border-radius: 4px;
+				}
+
+				.l:nth-child(1)
+				{
+					left: -4px - 18px;
+				}
+				.l:nth-child(2)
+				{
+					left: -4px;
+				}
+				.l:nth-child(3)
+				{
+					left: -4px + 18px;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 640px) {
+
+	#header
+	{
+		height: 80px;
+
+		.rows
+		{
+			#header-logo
+			{
+				width: 280px;
+			}
+
+			.header-menu
+			{
+				width: 100%;
+				margin: -1px 0px;
+				height: 0px;
+				overflow: hidden;
+
+				.b
+				{
+					float: none;
+					width: 420px;
+					height: 70px;
+					display: inline-block;
+					border-radius: 35px;
+					line-height: 60px;
+					margin: 5px 5px;
+					font-size: 20px;
+					cursor: default;
+				}
+			}
+
+			.header-ham
+			{
+				display: block;
+			}
+		}
+	}
+
+}

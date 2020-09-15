@@ -1,0 +1,175 @@
+@r: 0.6666666666666667;
+
+#popup
+{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.85);
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	opacity: 0;
+
+	.b
+	{
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+	}
+
+	.c
+	{
+		position: absolute;
+		left: 50%;
+		top: 50%;
+
+		.txt
+		{
+			position: absolute;
+			width: 720px * @r;
+			height: 100px;
+			margin-left: -680px * @r / 2;
+			margin-top: 120px;
+			color: #FFF;
+			text-align: left;
+
+			.l
+			{
+				float:left;
+				width: 4px;
+				height: 35px;
+				background-color: #FFF;
+			}
+
+			.h
+			{
+				float: left;
+				width: calc(~'100% - 4px');
+				color: #FFF;
+				font-size: 20px;
+				height: 35px;
+				line-height: 35px;
+				text-indent: 15px;
+				overflow: hidden;
+			}
+
+			.d
+			{
+				margin-top: 8px;
+				float: left;
+				width: 100%;
+				font-size: 14px;
+				line-height: 20px;
+
+			}
+		}
+
+		.photo
+		{
+			position: absolute;
+			width: 680px * @r;
+			height: 480px * @r;
+			border: 1px solid #FFF;
+			margin-left: -680px * @r / 2;
+			margin-top: -480px * @r / 2 - 50px;
+			border-radius: 10px;
+			background-color: #000;
+		}
+
+		.arr
+		{
+			position: absolute;
+			background-image: url('./img/content/popup/arr.png');
+			width: 53px * @r * 2;
+			height: 53px * @r * 2; 
+			background-size: 50%;
+			top: 50%;
+			margin-top: -53px * @r / 2;
+			cursor: pointer;
+			transition: .1s;
+			background-position: center center;
+			background-repeat: no-repeat;
+		}
+
+		.l
+		{
+			left: -80px;
+		}
+
+		.l:hover
+		{
+			left: -85px;
+		}
+
+		.r
+		{
+			right: -80px;
+			transform: rotate(180deg);
+		}
+
+		.r:hover
+		{
+			right: -85px;
+		}
+	}
+
+	.popup-close
+	{
+		position: absolute;
+		background-image: url('./img/content/popup/close.png');
+		width: 40px * @r;
+		height: 40px * @r;
+		background-position: center center;
+		background-size: 100%;
+		right: 30px;
+		top: 30px;
+		cursor: pointer;
+		transition: .1s;
+	}
+
+	.popup-close:hover
+	{
+		transform: scale(1.2);
+	}
+}
+
+@media only screen and (max-width: 640px) {
+	#popup
+	{
+		.c
+		{
+			.photo
+			{
+				width: 455px;
+				height: 480px;
+				margin-left: -455px / 2;
+				margin-top: -300px;
+			}
+
+			.txt
+			{
+				margin-top: 230px;
+				
+				.l
+				{
+					height: 40px;
+				}
+
+				.h
+				{
+					font-size: 30px;
+					line-height: 40px;
+				}
+
+				.d
+				{
+					font-size: 20px;
+					line-height: 28px;
+				}
+			}
+		}
+	}
+}

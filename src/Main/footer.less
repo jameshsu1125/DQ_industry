@@ -1,0 +1,192 @@
+@r: 0.6666666666666667;
+
+#footer
+{
+	position: fixed;
+	width: 100%;
+	height: 100px * @r;
+	background-color: #354e31;
+	bottom: 0;
+	text-align: center;
+	font-size: 14px;
+	user-select: none;
+	color: #FFF;
+	z-index: 999;
+
+	div
+	{
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+
+	.rows
+	{
+		position: relative;
+		width: 100%;
+		max-width: 990px;
+		height: 100%;
+		display: inline-block;
+
+
+		.footer-copyright
+		{
+			float: left;
+			width: 290px;
+			margin: 26px 0px 0px 40px;
+		}
+
+		.footer-socal
+		{
+			float: right;
+			width: 500px;
+			height: 100%;
+
+			.footer-txt
+			{
+				float: right;
+				width: 250px;
+				margin: 26px 10px;
+			}
+
+			.arr
+			{
+				float: right;
+				background-image: url('./img/footer/arr.png');
+				width: 5px * @r;
+				height: 10px * @r;
+				transition: .2s;
+			}
+
+			.footer-line
+			{
+				float: right;
+				background-image: url('./img/footer/line.png');
+				width: 116px * @r;
+				height: 36px * @r;
+				margin: 23px 10px;
+				cursor: pointer;
+
+				.arr
+				{
+					margin: 7px 12px;
+				}
+			}
+
+			.footer-line:hover
+			{
+				.arr
+				{
+					margin: 7px 7px;
+				}
+			}
+
+			.footer-fb
+			{
+				float: right;
+				background-image: url('./img/footer/fb.png');
+				width: 151px * @r;
+				height: 36px * @r;
+				margin: 23px 20px 0px 10px;
+				cursor: pointer;
+
+				.arr
+				{
+					margin: 7px 8px;
+				}
+			}
+
+			.footer-fb:hover
+			{
+				.arr
+				{
+					margin: 7px 5px;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 830px) {
+
+	#footer
+	{
+		height: 150px;
+
+		.rows
+		{
+			width: 560px;
+
+			.footer-copyright
+			{
+				float: left;
+				width: 100%;
+				margin: 0px 0px 0px 12px;
+				font-size: 18px;
+				text-align: left;
+			}
+
+			.footer-socal
+			{
+				float: left;
+				width: 100%;
+				height: 90px;
+
+				.footer-txt
+				{
+					float: left;
+					width: 192px;
+					font-size: 22px;
+					text-align: left;
+					margin: 19px 10px;
+				}
+
+				.arr
+				{
+					width: 5px;
+					height: 10px;
+				}
+
+				.footer-fb
+				{
+					width: 151px;
+					height: 36px;
+
+					.arr
+					{
+						margin: 12px 12px;
+					}
+				}
+
+				.footer-fb:hover
+				{
+					.arr
+					{
+						margin: 12px 12px;
+					}
+				}
+
+				.footer-line
+				{
+					width: 116px;
+					height: 36px;
+
+					.arr
+					{
+						margin: 12px 14px;
+					}
+				}
+
+				.footer-line:hover
+				{
+					.arr
+					{
+						margin: 12px 14px;
+					}
+				}
+			}
+
+		}
+	}
+
+}
