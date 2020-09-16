@@ -15,6 +15,7 @@ export default class carousel extends React.Component {
 			init:function(){
 				var h = window.innerHeight - $('#header').height() - $('#footer').height();
 				$(root.refs.slider_containers).height(h);
+				$(root.refs.main).height(window.innerHeight - ( root.state.dw > 750 ? 150 : 100));
 				this.circle.init();
 			},
 			circle:{ r:0, time:3000,
@@ -89,7 +90,7 @@ export default class carousel extends React.Component {
 			pauseOnHover:false
 		};
 		return ( 
-			<div id='carousel'>
+			<div ref='main' id='carousel'>
 				<div class='row'>
 					<div class='col'>
 						<div ref='slider_containers' class='slider_containers'>
