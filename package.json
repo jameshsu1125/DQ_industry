@@ -35,11 +35,11 @@
     "postcss-loader": "^3.0.0",
     "react-hot-loader": "^4.6.1",
     "style-loader": "^0.23.1",
-    "styled-components": "^3.4.10",
+    "styled-components": "^5.2.0",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.27.1",
-    "webpack-cli": "^3.1.2",
-    "webpack-dev-server": "^3.1.14"
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
     "animate.css": "^4.1.0",
