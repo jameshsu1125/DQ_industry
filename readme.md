@@ -8,13 +8,25 @@ $ npm i webpack-dev-server -g
 $ npm i node-pre-gyp -g
 ```
 
+#### My Node / npm / webpack 版本
+
+```
+node -v
+>v12.6.0
+
+npm -v
+>v6.14.6
+
+webpack -v
+>4.41.2
+```
+
 ###  Test project
 ```
 $ npm run dev
 ```
 
 #### project run with http://localhost:8080
-
 
 ### output to /dist
 ```
