@@ -217,7 +217,8 @@ export default class header extends React.Component {
 			}
 			var t = tar[index];
 
-			var pxy = $('#'+t).offset().top;
+			var pxy = $( '#' + t ).offset().top - $(this.refs.main).height();
+
 
 			self.scrollTo(pxy);
 			self.tr.ham.clicked();
@@ -234,7 +235,7 @@ export default class header extends React.Component {
 
 	render() {
 		return ( 
-			<div id='header'>
+			<div ref='main' id='header'>
 				<div class='rows'>
 					<div id='header-logo'></div>
 					<div ref='menu' class='header-menu'>
