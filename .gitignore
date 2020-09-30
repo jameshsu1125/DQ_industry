@@ -103,3 +103,5 @@ typings/
 # Mac OS
 .DS_Store
 dist/.DS_Store
+dist/_js/index.min.js.LICENSE.txt
+dist/_img/LESCA/UI/img/oc2.png
