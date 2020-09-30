@@ -17,8 +17,7 @@ export default class maps extends React.Component {
 			'23.298583, 120.276333',
 			'',
 		]
-		this.state = { index:0 }
-		
+		this.state = { index:0 };
 	}
 
 	componentDidMount() {
@@ -54,7 +53,6 @@ export default class maps extends React.Component {
 						<div class='logos'>
 							<div class='logo'></div>
 							<div class='title'>
-								
 								<h2>
 									協治企業
 								</h2>

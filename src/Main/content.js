@@ -9,24 +9,6 @@ import Maps from './maps';
 
 export default class body extends React.Component {
 
-	constructor(props) {
-		super(props);
-		const root = this;
-		//scripts
-	}
-
-	componentDidMount() {
-		
-	}
-
-	componentDidUpdate() {
-
-	}
-
-	componentWillUnmount() {
-		
-	}
-
 	render() {
 		return ( 
 			<div id='content'>

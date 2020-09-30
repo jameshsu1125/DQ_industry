@@ -3,24 +3,6 @@ import './footer.less';
 
 export default class footer extends React.Component {
 
-	constructor(props) {
-		super(props);
-		const root = this;
-		//scripts
-	}
-
-	componentDidMount() {
-		
-	}
-
-	componentDidUpdate() {
-
-	}
-
-	componentWillUnmount() {
-		
-	}
-
 	fb()
 	{
 		window.open('https://www.facebook.com/%E5%8D%94%E6%B2%BB%E4%BC%81%E6%A5%AD-100924884979877');

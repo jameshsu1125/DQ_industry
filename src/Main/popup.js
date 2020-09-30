@@ -11,10 +11,7 @@ export default class popup extends React.Component {
 	constructor(props) {
 		super(props);
 		const root = this;
-		//scripts
 
-
-		
 		this.data = [];
 		for(var i = 0; i < this.props.data.length; i++) {
 			for(var j = 0; j < this.props.data[i].db.length; j++) {
@@ -32,9 +29,7 @@ export default class popup extends React.Component {
 				break;
 			}
 		}
-
 		this.state = { img:`rgba(0, 0, 0, 0) url('${ this.data[this.index].img }') no-repeat scroll center center / cover`, name:this.data[this.index].name, des:this.data[this.index].des  }
-		//console.log(this.data, this.index)
 	}
 
 	in()

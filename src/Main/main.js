@@ -13,17 +13,6 @@ import Content from './content';
 import ORI from 'UI/OrientationChange'
 
 export default class main extends React.Component {
-
-	constructor(props) {
-		super(props);
-		const root = this;
-	}
-
-	componentDidMount() {
-
-	}
-
-
 	render() {
 		return ( 
 			<div id='main'>

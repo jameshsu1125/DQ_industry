@@ -9,8 +9,7 @@ export default class header extends React.Component {
 	constructor(props) {
 		super(props);
 		const root = this;
-		//scripts
-
+		
 		this.tr = {
 			init:function()
 			{

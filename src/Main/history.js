@@ -8,12 +8,6 @@ import ReactHtmlParser from 'react-html-parser';
 
 export default class history extends React.Component {
 
-	constructor(props) {
-		super(props);
-		const root = this;
-		//scripts
-	}
-
 	componentDidMount() {
 		if(this.props.index % 4 == 0 || this.props.index % 4 == 3)
 		{
