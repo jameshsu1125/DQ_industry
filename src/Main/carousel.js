@@ -13,10 +13,20 @@ export default class carousel extends React.Component {
 		//scripts
 		this.tr = {
 			init:function(){
-				var h = window.innerHeight - $('#header').height() - $('#footer').height();
-				$(root.refs.slider_containers).height(h);
-				$(root.refs.main).height(window.innerHeight - ( root.state.dw > 750 ? 150 : 100));
 				this.circle.init();
+				this.evt();
+			},
+			evt:function()
+			{
+				this.resize();
+				$(window).resize(()=>{
+					this.resize();
+				})
+			},
+			resize:function()
+			{
+				var h = window.innerHeight - $('#header').height() - $('#footer').height();
+				$(root.refs.slider_containers).find('div').height(h)
 			},
 			circle:{ r:0, time:3000,
 				init:function(){

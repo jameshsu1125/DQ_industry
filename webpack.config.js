@@ -2,7 +2,7 @@ var p = process.env.NODE_ENV;
 console.log('********* NODE_ENV = ' + p + " *******");
 
 const webpack = require('webpack');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const path = require('path');
 
 module.exports = {
@@ -39,8 +39,9 @@ module.exports = {
 		new webpack.DefinePlugin({'__REACT_DEVTOOLS_GLOBAL_HOOK__': '({ isDisabled: true })'}),
 	],
 	optimization: {
+		minimize: true,
 		minimizer: [
-			new UglifyJsPlugin({cache: false, parallel: true, uglifyOptions: {compress: {warnings: false }, ecma: 6, mangle: false, output:{beautify:false } }, sourceMap: false, })
+			new TerserPlugin({ sourceMap:false, cache:false, parallel: true })
 		]
 	},
 	devtool: 'cheap-inline-module-source-map',

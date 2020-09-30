@@ -17,7 +17,7 @@ module.exports =
 	},
 
 	error: function() {
-		alert('orientationchnage not support!');
+		//alert('orientationchnage not support!');
 	},
 
 	on: function(ang) {

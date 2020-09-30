@@ -10,6 +10,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Header from './header';
 import Footer from './footer';
 import Content from './content';
+import ORI from 'UI/OrientationChange'
 
 export default class main extends React.Component {
 
@@ -29,6 +30,7 @@ export default class main extends React.Component {
 				<Content />
 				<Header />
 				<Footer />
+				<ORI />
 			</div>
 		);
 	}
