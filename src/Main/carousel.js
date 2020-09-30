@@ -19,9 +19,7 @@ export default class carousel extends React.Component {
 			evt:function()
 			{
 				this.resize();
-				$(window).resize(()=>{
-					this.resize();
-				})
+				$(window).resize(()=>this.resize());
 			},
 			resize:function()
 			{
