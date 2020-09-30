@@ -39,8 +39,9 @@ module.exports = {
 		new webpack.DefinePlugin({'__REACT_DEVTOOLS_GLOBAL_HOOK__': '({ isDisabled: true })'}),
 	],
 	optimization: {
+		minimize: true,
 		minimizer: [
-			new TerserPlugin({ sourceMap:false, cache:true, parallel: true })
+			new TerserPlugin({ sourceMap:false, cache:true, parallel: true, extractComments: false, terserOptions: { output: {comments: false} } })
 		]
 	},
 	devtool: 'cheap-inline-module-source-map',
