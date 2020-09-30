@@ -1,8 +1,9 @@
 [協志企業](https://www.shyechih.com/)
+
 ### install webpack to global
 
 ```
-$ npm i webpack -g 
+$ npm i webpack -g
 $ npm i webpack-cli -g
 $ npm i webpack-dev-server -g
 $ npm i node-pre-gyp -g
@@ -21,7 +22,8 @@ webpack -v
 >4.41.2
 ```
 
-###  Test project
+### Test project
+
 ```
 $ npm run dev
 ```
@@ -29,6 +31,7 @@ $ npm run dev
 #### project run with http://localhost:8080
 
 ### output to /dist
+
 ```
 $ npm run op
 ```

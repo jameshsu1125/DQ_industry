@@ -1,44 +1,39 @@
 @r: 0.6666666666666667;
 
-#carousel
-{
+#carousel {
 	position: relative;
 	float: left;
 	width: 100%;
 
-	.pattern
-	{
+	.pattern {
 		position: absolute;
 		background: red;
 		top: 50%;
 		left: 50%;
 		pointer-events: none;
 
-		.headline
-		{
+		.headline {
 			position: absolute;
-			background-image: url('./img/content/carousel/headine.png');
+			background-image: url("./img/content/carousel/headine.png");
 			width: 307px * @r;
 			height: 153px * @r;
 			background-size: 100%;
-			margin-left: -307px * @r * .5;
-			margin-top: -153px * @r * .5;
+			margin-left: -307px * @r * 0.5;
+			margin-top: -153px * @r * 0.5;
 		}
 
-		.circle
-		{
+		.circle {
 			position: absolute;
-			background-image: url('./img/content/carousel/circle.png');
+			background-image: url("./img/content/carousel/circle.png");
 			width: 562px * @r;
 			height: 564px * @r;
-			margin-left: -562px * @r * .5;
-			margin-top: -564px * @r * .5;
+			margin-left: -562px * @r * 0.5;
+			margin-top: -564px * @r * 0.5;
 			background-size: 100%;
 		}
 	}
 
-	.slider_containers
-	{
+	.slider_containers {
 		width: 100%;
 	}
 
@@ -46,72 +41,63 @@
 		position: relative;
 	}
 
-	.p_0
-	{
-		background: rgba(0, 0, 0, 0) url('./img/content/carousel/slide_0.png') no-repeat scroll center center / cover;
+	.p_0 {
+		background: rgba(0, 0, 0, 0) url("./img/content/carousel/slide_0.png")
+			no-repeat scroll center center / cover;
 	}
 
-	.p_1
-	{
-		background: rgba(0, 0, 0, 0) url('./img/content/carousel/slide_1.png') no-repeat scroll center center / cover;
+	.p_1 {
+		background: rgba(0, 0, 0, 0) url("./img/content/carousel/slide_1.png")
+			no-repeat scroll center center / cover;
 	}
 
-	.p_2
-	{
-		background: rgba(0, 0, 0, 0) url('./img/content/carousel/slide_2.png') no-repeat scroll center center / cover;
+	.p_2 {
+		background: rgba(0, 0, 0, 0) url("./img/content/carousel/slide_2.png")
+			no-repeat scroll center center / cover;
 	}
 
-	.mp_0
-	{
-		background: rgba(0, 0, 0, 0) url('./img/content/carousel/slide_0_m.png') no-repeat scroll center center / cover;
+	.mp_0 {
+		background: rgba(0, 0, 0, 0) url("./img/content/carousel/slide_0_m.png")
+			no-repeat scroll center center / cover;
 	}
 
-	.mp_1
-	{
-		background: rgba(0, 0, 0, 0) url('./img/content/carousel/slide_1_m.png') no-repeat scroll center center / cover;
+	.mp_1 {
+		background: rgba(0, 0, 0, 0) url("./img/content/carousel/slide_1_m.png")
+			no-repeat scroll center center / cover;
 	}
 
-	.mp_2
-	{
-		background: rgba(0, 0, 0, 0) url('./img/content/carousel/slide_2_m.png') no-repeat scroll center center / cover;
+	.mp_2 {
+		background: rgba(0, 0, 0, 0) url("./img/content/carousel/slide_2_m.png")
+			no-repeat scroll center center / cover;
 	}
 
-	.slick-pic
-	{
+	.slick-pic {
 		position: absolute;
 		width: 100vh;
 		height: 100vh;
 	}
 
-	.slick-dots
-	{
+	.slick-dots {
 		bottom: 20px;
 
-		li
-		{
-			button:before
-			{
+		li {
+			button:before {
 				color: #575757;
 				opacity: 1;
 			}
 		}
 
-
-		.slick-active
-		{
-			button:before
-			{
-				color: #FFF;
+		.slick-active {
+			button:before {
+				color: #fff;
 				opacity: 1;
 			}
-			
 		}
 	}
 }
 
 @media only screen and (max-width: 640px) {
-	#carousel
-	{
+	#carousel {
 		.slick-track {
 			height: 80vh;
 		}

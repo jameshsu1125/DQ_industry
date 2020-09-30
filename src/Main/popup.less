@@ -1,18 +1,16 @@
 @r: 0.6666666666666667;
 
-#popup
-{
+#popup {
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0,0,0,.85);
+	background-color: rgba(0, 0, 0, 0.85);
 	z-index: 1000;
 	top: 0;
 	left: 0;
 	opacity: 0;
 
-	.b
-	{
+	.b {
 		position: absolute;
 		width: 100%;
 		height: 100%;
@@ -20,35 +18,31 @@
 		top: 0;
 	}
 
-	.c
-	{
+	.c {
 		position: absolute;
 		left: 50%;
 		top: 50%;
 
-		.txt
-		{
+		.txt {
 			position: absolute;
 			width: 720px * @r;
 			height: 100px;
 			margin-left: -680px * @r / 2;
 			margin-top: 120px;
-			color: #FFF;
+			color: #fff;
 			text-align: left;
 
-			.l
-			{
-				float:left;
+			.l {
+				float: left;
 				width: 4px;
 				height: 35px;
-				background-color: #FFF;
+				background-color: #fff;
 			}
 
-			.h
-			{
+			.h {
 				float: left;
 				width: calc(~'100% - 4px');
-				color: #FFF;
+				color: #fff;
 				font-size: 20px;
 				height: 35px;
 				line-height: 35px;
@@ -56,68 +50,59 @@
 				overflow: hidden;
 			}
 
-			.d
-			{
+			.d {
 				margin-top: 8px;
 				float: left;
 				width: 100%;
 				font-size: 14px;
 				line-height: 20px;
-
 			}
 		}
 
-		.photo
-		{
+		.photo {
 			position: absolute;
 			width: 680px * @r;
 			height: 480px * @r;
-			border: 1px solid #FFF;
+			border: 1px solid #fff;
 			margin-left: -680px * @r / 2;
 			margin-top: -480px * @r / 2 - 50px;
 			border-radius: 10px;
 			background-color: #000;
 		}
 
-		.arr
-		{
+		.arr {
 			position: absolute;
 			background-image: url('./img/content/popup/arr.png');
 			width: 53px * @r * 2;
-			height: 53px * @r * 2; 
+			height: 53px * @r * 2;
 			background-size: 50%;
 			top: 50%;
 			margin-top: -53px * @r / 2;
 			cursor: pointer;
-			transition: .1s;
+			transition: 0.1s;
 			background-position: center center;
 			background-repeat: no-repeat;
 		}
 
-		.l
-		{
+		.l {
 			left: -80px;
 		}
 
-		.l:hover
-		{
+		.l:hover {
 			left: -85px;
 		}
 
-		.r
-		{
+		.r {
 			right: -80px;
 			transform: rotate(180deg);
 		}
 
-		.r:hover
-		{
+		.r:hover {
 			right: -85px;
 		}
 	}
 
-	.popup-close
-	{
+	.popup-close {
 		position: absolute;
 		background-image: url('./img/content/popup/close.png');
 		width: 40px * @r;
@@ -127,45 +112,37 @@
 		right: 30px;
 		top: 30px;
 		cursor: pointer;
-		transition: .1s;
+		transition: 0.1s;
 	}
 
-	.popup-close:hover
-	{
+	.popup-close:hover {
 		transform: scale(1.2);
 	}
 }
 
 @media only screen and (max-width: 640px) {
-	#popup
-	{
-		.c
-		{
-			.photo
-			{
+	#popup {
+		.c {
+			.photo {
 				width: 455px;
 				height: 480px;
 				margin-left: -455px / 2;
 				margin-top: -300px;
 			}
 
-			.txt
-			{
+			.txt {
 				margin-top: 230px;
-				
-				.l
-				{
+
+				.l {
 					height: 40px;
 				}
 
-				.h
-				{
+				.h {
 					font-size: 30px;
 					line-height: 40px;
 				}
 
-				.d
-				{
+				.d {
 					font-size: 20px;
 					line-height: 28px;
 				}

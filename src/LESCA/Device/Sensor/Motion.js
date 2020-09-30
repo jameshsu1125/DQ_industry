@@ -1,6 +1,5 @@
 module.exports = {
-	init: function( { v = 20, callback } ) 
-	{
+	init: function ({ v = 20, callback }) {
 		this.d = this.s = { x: 0, y: 0, z: 0 };
 		this.is = true;
 		this.g = v;
@@ -14,29 +13,33 @@ module.exports = {
 		} else this.error();
 	},
 
-	call: function(e) {
+	call: function (e) {
 		this.d = e.accelerationIncludingGravity;
 	},
 
-	sync: function() {
+	sync: function () {
 		if (!this.is) return;
 		this.is = false;
-		let c = Math.abs(this.d.x - this.s.x + this.d.y - this.s.y + this.d.z + this.s.z);
+		let c = Math.abs(
+			this.d.x - this.s.x + this.d.y - this.s.y + this.d.z + this.s.z
+		);
 		if (c > this.g) this.cb(c);
 		this.s = this.d;
-		setTimeout(() => {this.is = true; }, 300);
+		setTimeout(() => {
+			this.is = true;
+		}, 300);
 	},
 
-	on: function(e) {
+	on: function (e) {
 		console.log(e);
 	},
 
-	remove: function() {
+	remove: function () {
 		window.removeEventListener('devicemotion', this.f);
 		clearInterval(this.i);
 	},
 
-	error: function(e) {
-		alert("motion not support!");
-	}
-}
+	error: function (e) {
+		alert('motion not support!');
+	},
+};

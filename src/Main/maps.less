@@ -1,7 +1,6 @@
 @r: 0.6666666666666667;
 
-#maps
-{
+#maps {
 	float: left;
 	width: 100%;
 	height: auto;
@@ -10,8 +9,7 @@
 	user-select: none;
 	background-color: #e9f0df;
 
-	.rows
-	{
+	.rows {
 		position: relative;
 		width: 100%;
 		max-width: 990px;
@@ -19,59 +17,50 @@
 		display: inline-block;
 		padding: 0px 40px;
 
-		h2
-		{
+		h2 {
 			text-align: left;
 			font-weight: normal;
 		}
 
-		h5
-		{
+		h5 {
 			text-align: left;
 			font-weight: normal;
 		}
 
-		p
-		{
+		p {
 			text-align: left;
 			font-size: 12px;
 		}
 
-		.cols
-		{
+		.cols {
 			float: left;
 			width: 50%;
 			height: auto;
 			text-align: left;
 			margin-bottom: 20px;
 
-			.gmap
-			{
+			.gmap {
 				float: left;
 				width: 450px;
 				height: 450px;
 
-				iframe
-				{
+				iframe {
 					width: 450px;
 				}
 			}
 
-			.btns
-			{
+			.btns {
 				float: left;
 				width: 100%;
 				height: auto;
 
-				.brow
-				{
+				.brow {
 					float: left;
 					width: 100%;
 					height: auto;
 					margin: 8px 0px;
 
-					.bmap
-					{
+					.bmap {
 						float: left;
 						width: 182px * @r;
 						height: 44px * @r;
@@ -87,49 +76,42 @@
 						cursor: pointer;
 					}
 
-					.bmap:hover
-					{
-						color: #FFF;
+					.bmap:hover {
+						color: #fff;
 						background-color: #354e31;
 					}
 
-					.on
-					{
-						color: #FFF;
+					.on {
+						color: #fff;
 						background-color: #354e31;
 					}
 
-					.t
-					{
+					.t {
 						float: left;
 						width: auto;
 						margin-left: 8px;
 						height: 42px * @r;
-						font-size: .7em;
+						font-size: 0.7em;
 						line-height: 1.3em;
 					}
 
-					.t2
-					{
+					.t2 {
 						float: left;
 						width: auto;
 						margin-left: 8px;
 						height: 42px * @r;
-						font-size: .7em;
+						font-size: 0.7em;
 						line-height: 42px * @r;
 					}
 				}
 			}
-			
 
-			.logos
-			{
+			.logos {
 				float: left;
 				width: 100%;
 				height: auto;
 
-				.logo
-				{
+				.logo {
 					float: left;
 					width: 101px * @r;
 					height: 100px * @r;
@@ -138,8 +120,7 @@
 					background-repeat: no-repeat;
 				}
 
-				.title
-				{
+				.title {
 					float: left;
 					width: 400px * @r;
 					height: 94px * @r;
@@ -150,23 +131,17 @@
 	}
 }
 @media only screen and (max-width: 860px) {
-	#maps
-	{
-		.rows
-		{
-			.gmap
-			{
+	#maps {
+		.rows {
+			.gmap {
 				width: 100% !important;
 
-				iframe
-				{
+				iframe {
 					width: 100% !important;
 				}
-
 			}
 
-			.cols
-			{
+			.cols {
 				width: 100%;
 			}
 		}

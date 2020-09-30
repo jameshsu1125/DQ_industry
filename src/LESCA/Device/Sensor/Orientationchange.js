@@ -1,6 +1,5 @@
-module.exports = 
-{
-	init: function( { callback } ) {
+module.exports = {
+	init: function ({ callback }) {
 		this.cb = callback || this.on;
 		if (window.DeviceOrientationEvent) {
 			this.f = this.call.bind(this);
@@ -9,18 +8,18 @@ module.exports =
 		} else this.error();
 	},
 
-	call: function(e) {
+	call: function (e) {
 		var angle;
-		if(window.orientation != undefined) angle = window.orientation;
+		if (window.orientation != undefined) angle = window.orientation;
 		else angle = screen.orientation.angle;
 		this.cb(angle);
 	},
 
-	error: function() {
+	error: function () {
 		//alert('orientationchnage not support!');
 	},
 
-	on: function(ang) {
+	on: function (ang) {
 		console.log(ang);
 	},
-}
+};

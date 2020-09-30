@@ -1,7 +1,6 @@
 @r: 0.6666666666666667;
 
-#step
-{
+#step {
 	float: left;
 	position: relative;
 	width: 100%;
@@ -10,8 +9,7 @@
 	padding: 50px 0px 0px 0px;
 	user-select: none;
 
-	.bg
-	{
+	.bg {
 		top: 0;
 		position: absolute;
 		width: 100%;
@@ -19,8 +17,7 @@
 		background-color: #e9f0df;
 	}
 
-	.rows
-	{
+	.rows {
 		position: relative;
 		width: 100%;
 		max-width: 990px;
@@ -28,46 +25,40 @@
 		display: inline-block;
 		padding: 0px 40px;
 
-		h2
-		{
+		h2 {
 			text-align: left;
 			font-weight: normal;
 		}
 
-		h5
-		{
+		h5 {
 			text-align: left;
 			font-weight: normal;
 		}
 
-		p
-		{
+		p {
 			text-align: left;
 			font-size: 12px;
 		}
 
-		.btn
-		{
+		.btn {
 			width: 630px * @r;
 			height: 87px * @r;
 			display: inline-block;
 			background-color: #354e31;
 			border-radius: 87px * @r;
 			line-height: 45px;
-			color: #FFF;
+			color: #fff;
 			font-size: 18px;
 			cursor: pointer;
-			transition: .1s;
+			transition: 0.1s;
 		}
 
-		.btn:hover
-		{
+		.btn:hover {
 			color: #354e31;
-			background-color: #CCC;
+			background-color: #ccc;
 		}
 
-		.i
-		{
+		.i {
 			position: relative;
 			float: left;
 			width: 104px * @r;
@@ -79,10 +70,9 @@
 			background-repeat: no-repeat;
 			border: 1px solid #000;
 			cursor: pointer;
-			transition: .2s;
+			transition: 0.2s;
 
-			.txt
-			{
+			.txt {
 				position: absolute;
 				width: 100%;
 				height: 50px;
@@ -92,24 +82,42 @@
 			}
 		}
 
-		.i:hover
-		{
-			background-color: #FFF;
+		.i:hover {
+			background-color: #fff;
 		}
 
-		.p0 {background-image: url('./img/content/step/i0.png'); }
-		.p1 {background-image: url('./img/content/step/i1.png'); }
-		.p2 {background-image: url('./img/content/step/i2.png'); }
-		.p3 {background-image: url('./img/content/step/i3.png'); }
-		.p4 {background-image: url('./img/content/step/i4.png'); }
-		.p5 {background-image: url('./img/content/step/i5.png'); }
-		.p6 {background-image: url('./img/content/step/i6.png'); }
-		.p7 {background-image: url('./img/content/step/i7.png'); }
-		.p8 {background-image: url('./img/content/step/i8.png'); }
-		.p9 {background-image: url('./img/content/step/i9.png'); }
+		.p0 {
+			background-image: url('./img/content/step/i0.png');
+		}
+		.p1 {
+			background-image: url('./img/content/step/i1.png');
+		}
+		.p2 {
+			background-image: url('./img/content/step/i2.png');
+		}
+		.p3 {
+			background-image: url('./img/content/step/i3.png');
+		}
+		.p4 {
+			background-image: url('./img/content/step/i4.png');
+		}
+		.p5 {
+			background-image: url('./img/content/step/i5.png');
+		}
+		.p6 {
+			background-image: url('./img/content/step/i6.png');
+		}
+		.p7 {
+			background-image: url('./img/content/step/i7.png');
+		}
+		.p8 {
+			background-image: url('./img/content/step/i8.png');
+		}
+		.p9 {
+			background-image: url('./img/content/step/i9.png');
+		}
 
-		.s
-		{
+		.s {
 			position: relative;
 			float: left;
 			width: 180px * @r;
@@ -118,12 +126,11 @@
 			border-radius: 10px;
 			background-size: 100%;
 			cursor: pointer;
-			transition: .2s;
+			transition: 0.2s;
 			background-color: gray;
 			overflow: hidden;
 
-			.d
-			{
+			.d {
 				position: relative;
 				float: left;
 				width: 100%;
@@ -131,73 +138,96 @@
 				background-size: 100%;
 				background-position: center center;
 				background-repeat: no-repeat;
-				transition: .2s;
+				transition: 0.2s;
 			}
 
-			.m0 {background-image: url('./img/content/step/s0.png'); }
-			.m1 {background-image: url('./img/content/step/s1.png'); }
-			.m2 {background-image: url('./img/content/step/s2.png'); }
-			.m3 {background-image: url('./img/content/step/s3.png'); }
-			.m4 {background-image: url('./img/content/step/s4.png'); }
-			.m5 {background-image: url('./img/content/step/s5.png'); }
-		}
-
-		.s:hover
-		{
-			.d
-			{
-				opacity: .5;
+			.m0 {
+				background-image: url('./img/content/step/s0.png');
+			}
+			.m1 {
+				background-image: url('./img/content/step/s1.png');
+			}
+			.m2 {
+				background-image: url('./img/content/step/s2.png');
+			}
+			.m3 {
+				background-image: url('./img/content/step/s3.png');
+			}
+			.m4 {
+				background-image: url('./img/content/step/s4.png');
+			}
+			.m5 {
+				background-image: url('./img/content/step/s5.png');
 			}
 		}
 
-		.bg0 {background-image: url('./img/content/step/bg0.jpg'); }
-		.bg0:hover {background-image: url('./img/content/step/bg0.gif'); }
-		.bg1 {background-image: url('./img/content/step/bg1.jpg'); }
-		.bg1:hover {background-image: url('./img/content/step/bg1.gif'); }
-		.bg2 {background-image: url('./img/content/step/bg2.jpg'); }
-		.bg2:hover {background-image: url('./img/content/step/bg2.gif'); }
-		.bg3 {background-image: url('./img/content/step/bg3.jpg'); }
-		.bg3:hover {background-image: url('./img/content/step/bg3.gif'); }
-		.bg4 {background-image: url('./img/content/step/bg4.jpg'); }
-		.bg4:hover {background-image: url('./img/content/step/bg4.gif'); }
-		.bg5 {background-image: url('./img/content/step/bg5.jpg'); }
-		.bg5:hover {background-image: url('./img/content/step/bg5.gif'); }
+		.s:hover {
+			.d {
+				opacity: 0.5;
+			}
+		}
 
-		
-
+		.bg0 {
+			background-image: url('./img/content/step/bg0.jpg');
+		}
+		.bg0:hover {
+			background-image: url('./img/content/step/bg0.gif');
+		}
+		.bg1 {
+			background-image: url('./img/content/step/bg1.jpg');
+		}
+		.bg1:hover {
+			background-image: url('./img/content/step/bg1.gif');
+		}
+		.bg2 {
+			background-image: url('./img/content/step/bg2.jpg');
+		}
+		.bg2:hover {
+			background-image: url('./img/content/step/bg2.gif');
+		}
+		.bg3 {
+			background-image: url('./img/content/step/bg3.jpg');
+		}
+		.bg3:hover {
+			background-image: url('./img/content/step/bg3.gif');
+		}
+		.bg4 {
+			background-image: url('./img/content/step/bg4.jpg');
+		}
+		.bg4:hover {
+			background-image: url('./img/content/step/bg4.gif');
+		}
+		.bg5 {
+			background-image: url('./img/content/step/bg5.jpg');
+		}
+		.bg5:hover {
+			background-image: url('./img/content/step/bg5.gif');
+		}
 	}
 }
 
 @media only screen and (max-width: 640px) {
-
-	#step
-	{
-		.bg
-		{
+	#step {
+		.bg {
 			height: 1511px;
 		}
-		.rows
-		{
-			.i
-			{
+		.rows {
+			.i {
 				width: 120px;
 				height: 120px;
 				margin: 20px 10px 70px 10px;
 
-				.txt
-				{
+				.txt {
 					top: 125px;
 					font-size: 20px;
 				}
 			}
 
-			.s
-			{
+			.s {
 				width: 175px;
 				height: 330px;
 				margin: 20px 5px;
 			}
-
 		}
 	}
 }
