@@ -189,9 +189,9 @@ export default class header extends React.Component {
 
 		this.tr.init();
 
-		var hash = ['about', 'steps', 'items', 'contact'];
+		var hash = ['about', 'steps', 'items', 'contact', 'home'];
 
-		var tar = ['recycle', 'step', 'back2life', 'maps'];
+		var tar = ['recycle', 'step', 'back2life', 'maps', 'header'];
 
 		$(this.refs.menu)
 			.children('.b')
@@ -208,7 +208,9 @@ export default class header extends React.Component {
 			}
 			var t = tar[index];
 
-			var pxy = $('#' + t).offset().top - $(this.refs.main).height();
+			var pxy;
+			if (t == 'header') pxy = 0;
+			else pxy = $('#' + t).offset().top - $(this.refs.main).height();
 
 			self.scrollTo(pxy);
 			self.tr.ham.clicked();
@@ -225,11 +227,15 @@ export default class header extends React.Component {
 		);
 	}
 
+	logoClicked() {
+		window.location.hash = '#home';
+	}
+
 	render() {
 		return (
 			<div ref='main' id='header'>
 				<div class='rows'>
-					<div id='header-logo'></div>
+					<div onClick={this.logoClicked.bind(this)} id='header-logo'></div>
 					<div ref='menu' class='header-menu'>
 						<div id='hb0' class='b'>
 							公司簡介
