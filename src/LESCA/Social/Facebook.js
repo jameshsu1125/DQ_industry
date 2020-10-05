@@ -1,101 +1,100 @@
+
 module.exports = {
-	init: function ({ uid, v = 'v3.2', callback = function () {} }, redirect) {
+
+	init: function( uid, {  v = 'v8.0', callback = function() {}, onStatus = function(){}}  ) {
+
 		const self = this;
 		this.id = uid;
-		this.is = false;
+		this.is = false;	
+		this.onStatus = onStatus;	
 
-		window.fbAsyncInit = function () {
+		window.fbAsyncInit = function() {
 			FB.init({
 				appId: uid,
 				cookie: true,
 				xfbml: true,
-				version: v,
+				version: v
 			});
 			self.is = true;
-			FB.AppEvents.logPageView();
 			callback();
 			self.status();
 		};
-		(function (d, s, id) {
-			var js;
-			if (d.getElementById(id)) {
-				return;
-			}
-			js = d.createElement(s);
-			js.id = id;
-			js.src = 'https://connect.facebook.net/en_US/sdk.js';
-			document.body.prepend(js);
-		})(document, 'script', 'facebook-jssdk');
+		(function(d, s, id){
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id;
+			js.src = "https://connect.facebook.net/en_US/sdk.js";
+			fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
 	},
-	status: function () {
+	getPictureByID:function()
+	{
+		return `https://graph.facebook.com/${ this.response.id }/picture?width=600&height=600`
+	},
+	status:function() {
+
 		const $ = require('jquery');
 		const Hash = require('UNIT/Get');
 
-		FB.getLoginStatus((e) => {
+		FB.getLoginStatus((e)=> {
+			
 			this.status = e.status;
 
-			switch (e.status) {
+			switch(e.status)
+			{
 				case 'not_authorized':
 					//console.log('未認證');
-					break;
+					//this.login();
+				break;
 
 				case 'connected':
 					//console.log('已認證/已登入');
-					this.id = e.authResponse.userID;
-					this.pic =
-						'http://graph.facebook.com/' + this.id + '/picture?type=large';
-					this.token = e.authResponse.accessToken;
-					var u = `https://graph.facebook.com/me?access_token=${e.authResponse.accessToken}`;
-					$.get(u, (e) => {
-						this.name = e.name;
-						if (Hash.get('code'))
-							this.ready({
-								userID: this.id,
-								name: this.name,
-								accessToken: this.token,
-								imageUrl: this.pic,
-							});
+					FB.api('/me', { fields: 'id,name,email,picture.width(800).height(800)' }, (response)=> {
+						this.response = response;
+						this.onStatus(response);
 					});
-					break;
+				break;
 
 				case 'unknown':
-					//console.log('登入');
-					break;
+					//console.log('未登入');
+					//this.login();
+				break;
 			}
 		});
 	},
-	ready: function (id, name, token, imageURL) {
-		console.log(id, name);
+	ready:function(id, name, token, imageURL) {
+		console.log(id, name);	
 	},
-	logout: function () {
-		FB.logout((e) => {
+	logout:function() {
+		FB.logout((e)=>{
 			console.log(e);
+		})	
+	},
+	share:function({ hashtag, redirect_uri, callback, url })
+	{
+		var u = `https://www.facebook.com/dialog/share?app_id=${this.id}&href=${encodeURIComponent(url)}&redirect_uri=${encodeURIComponent(redirect_uri)}`
+		window.location.href = u;
+	},
+	click:function() {
+		if(!this.is) { console.log('init first'); return; };
+		if(this.status != 'connected') this.login(window.location.href);
+		else this.ready({ userID: this.id, name: this.name, accessToken: this.token, imageUrl: this.pic });
+	},
+	login: function(cb) 
+	{
+		if(!this.is) { console.log('init first'); return; };
+		FB.login((response) => {
+			if (response.authResponse) {
+
+				FB.api('/me', { fields: 'id,name,email,picture.width(800).height(800)' }, (response2)=> {
+					this.response = response2;
+					this.onStatus(response);
+					cb(response);
+				});
+				
+			} else {
+				console.log('User cancelled login or did not fully authorize.');
+			}
 		});
 	},
-	click: function () {
-		if (!this.is) {
-			console.log('init first');
-			return;
-		}
-
-		if (this.status != 'connected') this.login(window.location.href);
-		else
-			this.ready({
-				userID: this.id,
-				name: this.name,
-				accessToken: this.token,
-				imageUrl: this.pic,
-			});
-	},
-	login: function (redirect) {
-		if (!this.is) {
-			console.log('init first');
-			return;
-		}
-		window.location.href =
-			'https://www.facebook.com/dialog/oauth?client_id=' +
-			this.id +
-			'&redirect_uri=' +
-			encodeURIComponent(redirect);
-	},
-};
+}
