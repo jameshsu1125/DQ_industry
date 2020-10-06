@@ -1,9 +1,9 @@
-import React from "react";
-import "./back2life.less";
-import Slider from "react-slick";
-import $ from "jquery";
-import Data from "./back2life-data";
-import Pad from "UNIT/NumberPad";
+import React from 'react';
+import './back2life.less';
+import Slider from 'react-slick';
+import $ from 'jquery';
+import Data from './back2life-data';
+import Pad from 'UNIT/NumberPad';
 
 export default class back2life extends React.Component {
 	constructor(props) {
@@ -32,15 +32,14 @@ export default class back2life extends React.Component {
 		var op = [];
 		for (var i = 0; i < this.data.length; i++) {
 			op.push(
-				<div class="card" key={i}>
+				<div class='card' key={i}>
 					<div
-						class="img"
+						class='img'
 						style={{
 							background: `rgba(0, 0, 0, 0) url('${this.data[i].img}') no-repeat scroll center center / cover`,
-						}}
-					></div>
-					<div class="txt"> {this.data[i].txt} </div>
-				</div>,
+						}}></div>
+					<div class='txt'> {this.data[i].txt} </div>
+				</div>
 			);
 		}
 		return op;
@@ -60,7 +59,7 @@ export default class back2life extends React.Component {
 				autoplay: false,
 				autoplaySpeed: 3000,
 				afterChange: (e) => {
-					if (e == "left") this.index++;
+					if (e == 'left') this.index++;
 					else this.index--;
 					this.index = this.index > 1 ? 0 : this.index;
 					this.index = this.index < 0 ? 1 : this.index;
@@ -89,7 +88,7 @@ export default class back2life extends React.Component {
 				autoplay: false,
 				autoplaySpeed: 3000,
 				afterChange: (e) => {
-					if (e == "left") this.index++;
+					if (e == 'left') this.index++;
 					else this.index--;
 					this.index = this.index > 3 ? 0 : this.index;
 					this.index = this.index < 0 ? 1 : this.index;
@@ -110,7 +109,7 @@ export default class back2life extends React.Component {
 			};
 		}
 		return (
-			<Slider ref="slider" {...settings}>
+			<Slider ref='slider' {...settings}>
 				{this.append_slider()}
 			</Slider>
 		);
@@ -118,16 +117,16 @@ export default class back2life extends React.Component {
 
 	render() {
 		return (
-			<div id="back2life">
-				<div class="rows">
+			<div id='back2life'>
+				<div class='rows'>
 					<h2>回歸生活零浪費</h2>
 				</div>
-				<div class="rows2 mt-3">
+				<div class='rows2 mt-3'>
 					{this.append_slid()}
-					<div ref="l" class="arr l">
+					<div ref='l' class='arr l'>
 						06
 					</div>
-					<div ref="r" class="arr r">
+					<div ref='r' class='arr r'>
 						04
 					</div>
 				</div>
