@@ -38,7 +38,6 @@
 		"postcss-loader": "^3.0.0",
 		"react-hot-loader": "^4.6.1",
 		"style-loader": "^0.23.1",
-		"styled-components": "^5.2.0",
 		"terser-webpack-plugin": "^4.2.2",
 		"webpack": "^4.27.1",
 		"webpack-cli": "^3.3.12",
@@ -62,7 +61,6 @@
 		"react-dom": "^16.6.3",
 		"react-html-parser": "^2.0.2",
 		"react-slick": "^0.26.1",
-		"react-split-flap-display": "^0.1.0",
 		"slick-carousel": "^1.8.1",
 		"sweetalert": "^2.1.2",
 		"uglify-js": "^3.11.0"
