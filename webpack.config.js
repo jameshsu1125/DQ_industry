@@ -11,52 +11,13 @@ module.exports = {
 	},
 	module: {
 		rules: [
-			{
-				test: /\.(js|jsx)$/,
-				exclude: /node_modules/,
-				use: 'babel-loader?retainLines=true',
-			},
-			{
-				test: /\.less$/,
-				use: ['style-loader', 'css-loader', 'less-loader', 'postcss-loader'],
-			},
+			{ test: /\.(js|jsx)$/, exclude: /node_modules/, use: 'babel-loader?retainLines=true' },
+			{ test: /\.less$/, use: ['style-loader', 'css-loader', 'less-loader', 'postcss-loader'] },
 			{ test: /\.css$/, use: ['style-loader', 'css-loader', 'postcss-loader'] },
-			{
-				test: /\.(png|jpg|gif|svg)$/,
-				use: [
-					{
-						loader: 'file-loader',
-						options: { name: 'img/[path][name].[ext]', context: 'src' },
-					},
-				],
-			},
-			{
-				test: /\.(ogv|mp4)$/,
-				use: [
-					{
-						loader: 'file-loader',
-						options: { name: 'vid/[path][name].[ext]', context: 'src' },
-					},
-				],
-			},
-			{
-				test: /\.(wav|mp3)$/,
-				use: [
-					{
-						loader: 'file-loader',
-						options: { name: 'aud/[path][name].[ext]', context: 'src' },
-					},
-				],
-			},
-			{
-				test: /\.(eot|woff|woff2|ttf)$/,
-				use: [
-					{
-						loader: 'file-loader',
-						options: { name: 'font/[path][name].[ext]', context: 'src' },
-					},
-				],
-			},
+			{ test: /\.(png|jpg|gif|svg)$/, use: [{ loader: 'file-loader', options: { name: 'img/[path][name].[ext]', context: 'src' } }] },
+			{ test: /\.(ogv|mp4)$/, use: [{ loader: 'file-loader', options: { name: 'vid/[path][name].[ext]', context: 'src' } }] },
+			{ test: /\.(wav|mp3)$/, use: [{ loader: 'file-loader', options: { name: 'aud/[path][name].[ext]', context: 'src' } }] },
+			{ test: /\.(eot|woff|woff2|ttf)$/, use: [{ loader: 'file-loader', options: { name: 'font/[path][name].[ext]', context: 'src' } }] },
 		],
 	},
 	resolve: {

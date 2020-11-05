@@ -8,14 +8,7 @@ export default class maps extends React.Component {
 		super(props);
 		const root = this;
 		//scripts
-		this.data = [
-			'22.571167, 120.603667',
-			'22.647250, 120.390194',
-			'22.703361, 120.344806',
-			'23.189167, 120.277750',
-			'23.298583, 120.276333',
-			'',
-		];
+		this.data = ['22.571167, 120.603667', '22.647250, 120.390194', '22.703361, 120.344806', '23.189167, 120.277750', '23.298583, 120.276333', ''];
 		this.state = { index: 0 };
 	}
 
@@ -38,16 +31,7 @@ export default class maps extends React.Component {
 	}
 
 	appendMaps() {
-		return (
-			<iframe
-				height='450'
-				frameBorder='0'
-				src={
-					'https://www.google.com/maps/embed/v1/place?q=' +
-					this.data[this.state.index] +
-					'&key=AIzaSyBAkUIZBcGHr1DLLAbZbb7mT-7LzwWEhPk'
-				}></iframe>
-		);
+		return <iframe height='450' frameBorder='0' src={'https://www.google.com/maps/embed/v1/place?q=' + this.data[this.state.index] + '&key=AIzaSyCZ0CARgzpoKD_SMvZBwWKJpC-eGgNVrNA'}></iframe>;
 	}
 
 	render() {
